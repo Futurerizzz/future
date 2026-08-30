@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เที่ยวอยุธยา มรดกโลกและวัดดัง 10 แห่ง | Ayutthaya Heritage Travel</title>
+  <meta name="description" content="คู่มือท่องเที่ยวพระนครศรีอยุธยา แนะนำ 10 วัดดังและโบราณสถานมรดกโลก วางแผนทริป One Day Trip เช่าชุดไทย และข้อมูลการเดินทางฉบับสมบูรณ์">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Prompt & Sarabun -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#FDFBF7] text-slate-800 antialiased selection:bg-amber-600 selection:text-white">
+
+  <!-- Navigation Bar -->
+  <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-amber-100/80 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-700 to-amber-500 text-white flex items-center justify-center text-2xl shadow-md shadow-amber-600/20 group-hover:scale-105 transition">
+            <i class="fa-solid fa-place-of-worship"></i>
+          </div>
+          <div>
+            <div class="font-bold text-xl sm:text-2xl text-slate-900 tracking-tight flex items-center gap-1.5">
+              <span>อยุธยา</span>
+              <span class="text-amber-600 font-extrabold">มรดกโลก</span>
+            </div>
+            <p class="text-xs text-slate-500 font-sarabun">คู่มือ 10 วัดดังและโบราณสถาน</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-1 lg:gap-2 text-sm font-medium text-slate-700">
+          <a href="index.html" class="px-4 py-2 rounded-xl text-amber-700 bg-amber-50 font-semibold transition">
+            หน้าแรก
+          </a>
+          <a href="places.html" class="px-4 py-2 rounded-xl hover:text-amber-700 hover:bg-amber-50/60 transition">
+            10 สถานที่แนะนำ
+          </a>
+          <a href="planner.html" class="px-4 py-2 rounded-xl hover:text-amber-700 hover:bg-amber-50/60 transition">
+            วางแผนทริป 1 วัน
+          </a>
+          <a href="tips.html" class="px-4 py-2 rounded-xl hover:text-amber-700 hover:bg-amber-50/60 transition">
+            คู่มือ & ข้อควรรู้
+          </a>
+        </div>
+
+        <!-- Right Side Actions -->
+        <div class="flex items-center gap-3">
+          <!-- Favorite Drawer Button -->
+          <a href="places.html?view=favorites" class="relative p-2.5 rounded-xl border border-amber-200/80 bg-amber-50/50 hover:bg-amber-100/60 text-slate-700 hover:text-amber-700 transition" title="รายการโปรด">
+            <i class="fa-regular fa-heart text-lg"></i>
+            <span class="fav-count-badge hidden absolute -top-1.5 -right-1.5 w-5 h-5 bg-rose-500 text-white text-[11px] font-bold rounded-full flex items-center justify-center shadow-sm">0</span>
+          </a>
+
+          <!-- Search CTA -->
+          <a href="places.html" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white text-sm font-medium shadow-md shadow-amber-600/20 transition">
+            <i class="fa-solid fa-magnifying-glass text-xs"></i>
+            <span>ค้นหาวัด</span>
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button id="mobile-menu-button" type="button" class="md:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50 transition" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-amber-100 bg-white/95 backdrop-blur-lg px-4 pt-3 pb-6 space-y-2 shadow-xl">
+      <a href="index.html" class="block px-4 py-3 rounded-xl font-semibold text-amber-700 bg-amber-50">
+        <i class="fa-solid fa-house mr-3 w-5"></i> หน้าแรก
+      </a>
+      <a href="places.html" class="block px-4 py-3 rounded-xl font-medium text-slate-700 hover:bg-amber-50 hover:text-amber-700">
+        <i class="fa-solid fa-landmark-dome mr-3 w-5"></i> 10 สถานที่แนะนำ (ไม่ซ้ำ)
+      </a>
+      <a href="planner.html" class="block px-4 py-3 rounded-xl font-medium text-slate-700 hover:bg-amber-50 hover:text-amber-700">
+        <i class="fa-solid fa-route mr-3 w-5"></i> วางแผนทริป 1 วัน
+      </a>
+      <a href="tips.html" class="block px-4 py-3 rounded-xl font-medium text-slate-700 hover:bg-amber-50 hover:text-amber-700">
+        <i class="fa-solid fa-circle-info mr-3 w-5"></i> คู่มือ & ข้อควรรู้
+      </a>
+      <div class="pt-2">
+        <a href="places.html" class="w-full text-center py-3 rounded-xl bg-amber-600 text-white font-medium flex items-center justify-center gap-2">
+          <i class="fa-solid fa-compass"></i> สำรวจสถานที่ทั้งหมด
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative min-h-[580px] lg:min-h-[640px] flex items-center justify-center text-white overflow-hidden">
+    <!-- Hero Background Image & Gradient Overlay -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Wat_Chaiwatthanaram_by_drone.jpg/1280px-Wat_Chaiwatthanaram_by_drone.jpg" alt="วัดไชยวัฒนาราม อยุธยา" class="absolute inset-0 w-full h-full object-cover object-center scale-105 filter brightness-75">
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/50 to-slate-900/40"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center space-y-6">
+      
+      <!-- UNESCO Badge -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-amber-500/20 backdrop-blur-md border border-amber-400/40 text-amber-200 text-xs sm:text-sm font-medium tracking-wide">
+        <i class="fa-solid fa-certificate text-amber-400"></i>
+        <span>UNESCO World Heritage Site • เมืองประวัติศาสตร์พระนครศรีอยุธยา</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight drop-shadow-md">
+        สัมผัสมนต์เสน่ห์แห่งกรุงเก่า<br>
+        <span class="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200 bg-clip-text text-transparent">
+          10 วัดดังและโบราณสถานมรดกโลก
+        </span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="max-w-2xl mx-auto text-slate-200 text-sm sm:text-base md:text-lg font-sarabun font-light leading-relaxed drop-shadow">
+        เปิดบันทึกประวัติศาสตร์กว่า 400 ปี กราบสักการะสิ่งศักดิ์สิทธิ์ เสริมมงคลชีวิต เช่าชุดไทยถ่ายภาพมุมมหาชน และสัมผัสความยิ่งใหญ่ของสยามประเทศ
+      </p>
+
+      <!-- Search & CTA Actions -->
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-xl mx-auto">
+        <a href="places.html" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold shadow-lg shadow-amber-600/30 hover:scale-105 transition flex items-center justify-center gap-3 text-base">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span>ดู 10 สถานที่แนะนำ</span>
+        </a>
+        <a href="planner.html" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/15 hover:bg-white/25 text-white font-medium border border-white/30 backdrop-blur-md hover:scale-105 transition flex items-center justify-center gap-3 text-base">
+          <i class="fa-solid fa-route text-amber-300"></i>
+          <span>วางแผนเที่ยว 1 วัน</span>
+        </a>
+      </div>
+
+      <!-- Quick Stats Counter -->
+      <div class="pt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto text-left">
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 text-center">
+          <div class="text-2xl sm:text-3xl font-bold text-amber-300">10</div>
+          <div class="text-xs text-slate-300 font-sarabun mt-0.5">วัดดัง & โบราณสถาน</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 text-center">
+          <div class="text-2xl sm:text-3xl font-bold text-amber-300">417</div>
+          <div class="text-xs text-slate-300 font-sarabun mt-0.5">ปีแห่งราชธานีสยาม</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 text-center">
+          <div class="text-2xl sm:text-3xl font-bold text-amber-300">100%</div>
+          <div class="text-xs text-slate-300 font-sarabun mt-0.5">ข้อมูลละเอียด & แผนที่</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 text-center">
+          <div class="text-2xl sm:text-3xl font-bold text-amber-300">1 วัน</div>
+          <div class="text-xs text-slate-300 font-sarabun mt-0.5">เที่ยวครบ จบง่ายใกล้กรุง</div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Quick Category Fast Links -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      
+      <a href="places.html?cat=world-heritage" class="bg-white rounded-2xl p-5 shadow-lg shadow-slate-200/50 border border-amber-100 hover:border-amber-400 hover:-translate-y-1 transition group">
+        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-3 group-hover:bg-amber-600 group-hover:text-white transition">
+          <i class="fa-solid fa-landmark-dome"></i>
+        </div>
+        <h3 class="font-bold text-slate-800 text-base group-hover:text-amber-700 transition">มรดกโลก UNESCO</h3>
+        <p class="text-xs text-slate-500 font-sarabun mt-1">วัดมหาธาตุ, วัดพระศรีสรรเพชญ์</p>
+      </a>
+
+      <a href="places.html?cat=riverside" class="bg-white rounded-2xl p-5 shadow-lg shadow-slate-200/50 border border-amber-100 hover:border-amber-400 hover:-translate-y-1 transition group">
+        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-3 group-hover:bg-amber-600 group-hover:text-white transition">
+          <i class="fa-solid fa-camera-retro"></i>
+        </div>
+        <h3 class="font-bold text-slate-800 text-base group-hover:text-amber-700 transition">ริมน้ำ & ถ่ายรูปชุดไทย</h3>
+        <p class="text-xs text-slate-500 font-sarabun mt-1">วัดไชยวัฒนาราม, วัดพุทไธศวรรย์</p>
+      </a>
+
+      <a href="places.html?cat=temple-blessing" class="bg-white rounded-2xl p-5 shadow-lg shadow-slate-200/50 border border-amber-100 hover:border-amber-400 hover:-translate-y-1 transition group">
+        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-3 group-hover:bg-amber-600 group-hover:text-white transition">
+          <i class="fa-solid fa-hands-praying"></i>
+        </div>
+        <h3 class="font-bold text-slate-800 text-base group-hover:text-amber-700 transition">สายมู ขอพรเสริมดวง</h3>
+        <p class="text-xs text-slate-500 font-sarabun mt-1">วัดใหญ่ชัยมงคล, วัดพนัญเชิง</p>
+      </a>
+
+      <a href="planner.html" class="bg-white rounded-2xl p-5 shadow-lg shadow-slate-200/50 border border-amber-100 hover:border-amber-400 hover:-translate-y-1 transition group">
+        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-3 group-hover:bg-amber-600 group-hover:text-white transition">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+        <h3 class="font-bold text-slate-800 text-base group-hover:text-amber-700 transition">จัดทริป One Day Trip</h3>
+        <p class="text-xs text-slate-500 font-sarabun mt-1">เส้นทางท่องเที่ยว เช้า-เย็น ครบสูตร</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Featured 6 Attractions Showcase Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <div class="inline-flex items-center gap-2 text-amber-700 text-xs sm:text-sm font-semibold tracking-wider uppercase mb-2">
+          <i class="fa-solid fa-sparkles text-amber-500"></i> Top Rated Attractions
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-bold text-slate-900">
+          ไฮไลต์ 6 สถานที่ยอดนิยมในอยุธยา
+        </h2>
+        <p class="text-slate-500 text-sm sm:text-base font-sarabun mt-2 max-w-xl">
+          คัดสรรวัดและโบราณสถานสำคัญที่มีเอกลักษณ์โดดเด่น งดงาม และต้องแวะชมเมื่อมาเยือนกรุงเก่า
+        </p>
+      </div>
+      <a href="places.html" class="mt-4 md:mt-0 inline-flex items-center gap-2 font-semibold text-amber-700 hover:text-amber-800 hover:underline">
+        <span>ดูสถานที่ทั้งหมด 10 แห่ง</span>
+        <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+
+    <!-- Featured Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="featured-places-grid">
+      <!-- Generated via JS or Static for instant loading -->
+    </div>
+  </section>
+
+  <!-- One Day Trip Interactive Timeline Feature Box -->
+  <section class="bg-gradient-to-b from-amber-50/70 to-orange-50/40 py-20 border-y border-amber-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="px-3.5 py-1.5 rounded-full bg-amber-200/70 text-amber-900 text-xs font-semibold uppercase tracking-wider">
+          One Day Trip Itinerary
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">
+          เส้นทางแนะนำ: เที่ยวอยุธยา 1 วันเต็ม
+        </h2>
+        <p class="text-slate-600 font-sarabun text-sm sm:text-base">
+          เดินทางง่าย ใกล้กรุงเทพฯ จัดสรรเวลาลงตัวตั้งแต่เช้าจรบค่ำ ได้ทั้งไหว้พระ ถ่ายรูปชุดไทย และชมวิวพระอาทิตย์ตก
+        </p>
+      </div>
+
+      <!-- Timeline Cards Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+        
+        <!-- Step 1 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-amber-100/80 relative flex flex-col justify-between hover:shadow-md transition">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold text-sm flex items-center justify-center mb-4 shadow">
+              01
+            </div>
+            <div class="text-xs font-semibold text-amber-700 uppercase tracking-wider">08:30 - 10:00 น.</div>
+            <h3 class="text-lg font-bold text-slate-800 mt-1 mb-2">วัดใหญ่ชัยมงคล</h3>
+            <p class="text-xs text-slate-500 font-sarabun leading-relaxed">
+              กราบพระนอนองค์ใหญ่กลางแจ้ง และขึ้นบันไดชมยอดเจดีย์ชัยมงคลรับพลังแห่งชัยชนะแต่เช้าตรู่
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+            <span><i class="fa-solid fa-hands-praying text-amber-600 mr-1"></i> เสริมการงาน</span>
+            <a href="detail.html?id=wat-yai-chai-mongkhon" class="text-amber-700 font-semibold hover:underline">ดูข้อมูล</a>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-amber-100/80 relative flex flex-col justify-between hover:shadow-md transition">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold text-sm flex items-center justify-center mb-4 shadow">
+              02
+            </div>
+            <div class="text-xs font-semibold text-amber-700 uppercase tracking-wider">10:30 - 12:00 น.</div>
+            <h3 class="text-lg font-bold text-slate-800 mt-1 mb-2">วัดมหาธาตุ & ราชบูรณะ</h3>
+            <p class="text-xs text-slate-500 font-sarabun leading-relaxed">
+              ชมเศียรพระพุทธรูปในรากไม้โพธิ์อันเลื่องชื่อ และเดินข้ามถนนไปสำรวจกรุสมบัติโบราณวัดราชบูรณะ
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+            <span><i class="fa-solid fa-landmark text-amber-600 mr-1"></i> มรดกโลก</span>
+            <a href="detail.html?id=wat-mahathat" class="text-amber-700 font-semibold hover:underline">ดูข้อมูล</a>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-amber-100/80 relative flex flex-col justify-between hover:shadow-md transition">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold text-sm flex items-center justify-center mb-4 shadow">
+              03
+            </div>
+            <div class="text-xs font-semibold text-amber-700 uppercase tracking-wider">13:30 - 15:30 น.</div>
+            <h3 class="text-lg font-bold text-slate-800 mt-1 mb-2">วัดพระศรีสรรเพชญ์</h3>
+            <p class="text-xs text-slate-500 font-sarabun leading-relaxed">
+              ชมเจดีย์ 3 องค์สัญลักษณ์อยุธยา และเดินเข้าวิหารพระมงคลบพิตรเพื่อกราบพระพุทธรูปสัมฤทธิ์
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+            <span><i class="fa-solid fa-crown text-amber-600 mr-1"></i> วัดหลวงโบราณ</span>
+            <a href="detail.html?id=wat-phra-si-sanphet" class="text-amber-700 font-semibold hover:underline">ดูข้อมูล</a>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-amber-100/80 relative flex flex-col justify-between hover:shadow-md transition">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold text-sm flex items-center justify-center mb-4 shadow">
+              04
+            </div>
+            <div class="text-xs font-semibold text-amber-700 uppercase tracking-wider">16:30 - 19:00 น.</div>
+            <h3 class="text-lg font-bold text-slate-800 mt-1 mb-2">วัดไชยวัฒนาราม</h3>
+            <p class="text-xs text-slate-500 font-sarabun leading-relaxed">
+              สวมชุดไทย ถ่ายภาพยามแดดร่มลมตกริมแม่น้ำเจ้าพระยา รอดูพระอาทิตย์อัสดงและไฟส่องสว่าง
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+            <span><i class="fa-solid fa-camera text-amber-600 mr-1"></i> ถ่ายรูปชุดไทย</span>
+            <a href="detail.html?id=wat-chaiwatthanaram" class="text-amber-700 font-semibold hover:underline">ดูข้อมูล</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Planner Action Banner -->
+      <div class="mt-12 text-center">
+        <a href="planner.html" class="inline-flex items-center gap-3 px-8 py-3.5 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-semibold shadow-md transition">
+          <i class="fa-solid fa-map"></i>
+          <span>ดูรายละเอียดเส้นทางและแผนที่ทั้งหมด</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Visitor Guide & Essentials (Quick Preview) -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Dress Code Tips -->
+      <div class="bg-white rounded-3xl p-8 shadow-sm border border-amber-100 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-shirt"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">การแต่งกายเข้าชม</h3>
+          <p class="text-slate-600 text-sm font-sarabun mb-4 leading-relaxed">
+            กรุณาแต่งกายสุภาพ สวมเสื้อมีแขน กางเกงหรือกระโปรงยาวคลุมเข่า เพื่อแสดงความเคารพต่อสถานที่ศักดิ์สิทธิ์
+          </p>
+          <ul class="space-y-2 text-xs font-sarabun text-slate-600">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> เสื้อมีแขน / เสื้อเชิ้ต</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> กระโปรง/กางเกงยาวคลุมเข่า</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-rose-500"></i> งดเสื้อกล้าม เกาะอก ขาสั้น</li>
+          </ul>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-100">
+          <a href="tips.html#dress-code" class="text-amber-700 font-semibold text-xs hover:underline inline-flex items-center gap-1">
+            <span>อ่านระเบียบเพิ่มเติม</span>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Ticket & Pass Tips -->
+      <div class="bg-white rounded-3xl p-8 shadow-sm border border-amber-100 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-ticket"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">บัตรเข้าชม & ตั๋วรวม</h3>
+          <p class="text-slate-600 text-sm font-sarabun mb-4 leading-relaxed">
+            ชาวไทยค่าเข้าชมเพียง 10 บาท/แห่ง มีบัตรรวม 6 วัดมรดกโลกเพียง 40 บาท (ชาวต่างชาติ 220 บาท) อายุ 30 วัน
+          </p>
+          <ul class="space-y-2 text-xs font-sarabun text-slate-600">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> ซื้อได้ ณ เคาน์เตอร์หน้าวัด</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> วัดส่วนใหญ่เปิด 08:00 - 18:30 น.</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> วันหยุดเปิดไฟประดับยามค่ำคืน</li>
+          </ul>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-100">
+          <a href="tips.html#ticket-pass" class="text-amber-700 font-semibold text-xs hover:underline inline-flex items-center gap-1">
+            <span>ดูรายละเอียดบัตร</span>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Thai Costume Tips -->
+      <div class="bg-white rounded-3xl p-8 shadow-sm border border-amber-100 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">เช่าชุดไทยถ่ายรูป</h3>
+          <p class="text-slate-600 text-sm font-sarabun mb-4 leading-relaxed">
+            สัมผัสประสบการณ์ย้อนยุคด้วยชุดไทยสวยสง่า มีร้านบริการกว่า 50 ร้านรอบวัดไชยวัฒนาราม ราคาเป็นกันเอง
+          </p>
+          <ul class="space-y-2 text-xs font-sarabun text-slate-600">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> ค่าเช่าชุด 150 - 300 บาท/คน</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> มีบริการทำผม แต่งหน้า และร่ม</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> แสงสวยสุดช่วง 16:30 - 18:15 น.</li>
+          </ul>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-100">
+          <a href="tips.html#thai-costume" class="text-amber-700 font-semibold text-xs hover:underline inline-flex items-center gap-1">
+            <span>ดูพิกัดร้านเช่าชุด</span>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Ayutthaya CTA Banner -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+    <div class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-amber-900 via-amber-800 to-stone-900 text-white p-8 sm:p-14 shadow-2xl">
+      <div class="relative z-10 max-w-2xl space-y-4">
+        <span class="text-amber-300 font-semibold text-xs tracking-wider uppercase">พร้อมออกเดินทางแล้วหรือยัง?</span>
+        <h2 class="text-2xl sm:text-4xl font-bold leading-tight">
+          สำรวจข้อมูลครบ 10 วัดดัง<br>และโบราณสถานมรดกโลก
+        </h2>
+        <p class="text-amber-100/80 font-sarabun text-sm sm:text-base leading-relaxed">
+          รวมประวัติ ไฮไลต์ เวลาเปิด-ปิด ค่าเข้าชม และแผนที่ GPS นำทางครบครัน ใช้งานง่ายบนมือถือ
+        </p>
+        <div class="pt-3 flex flex-wrap items-center gap-4">
+          <a href="places.html" class="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold transition flex items-center gap-2 shadow-lg">
+            <span>ดูรายชื่อ 10 สถานที่</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+          <a href="planner.html" class="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium backdrop-blur transition">
+            <span>เริ่มวางแผนทริป</span>
+          </a>
+        </div>
+      </div>
+      <!-- Background Decorative Motif -->
+      <div class="absolute right-0 bottom-0 opacity-10 text-[260px] leading-none pointer-events-none translate-x-12 translate-y-12">
+        <i class="fa-solid fa-place-of-worship"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1: About Portal -->
+        <div class="space-y-4 md:col-span-1">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center text-xl">
+              <i class="fa-solid fa-place-of-worship"></i>
+            </div>
+            <span class="font-bold text-lg text-white">อยุธยามรดกโลก</span>
+          </div>
+          <p class="text-xs font-sarabun leading-relaxed text-slate-400">
+            เว็บไซต์แนะนำการท่องเที่ยวเมืองประวัติศาสตร์พระนครศรีอยุธยา รวบรวมข้อมูล 10 วัดดังและโบราณสถานมรดกโลก UNESCO พร้อมคู่มือท่องเที่ยวฉบับสมบูรณ์
+          </p>
+          <div class="flex items-center gap-3 text-slate-400 text-sm">
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-amber-600 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Site Links -->
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">หน้าหลักของเว็บไซต์</h4>
+          <ul class="space-y-2.5 text-xs font-sarabun">
+            <li><a href="index.html" class="hover:text-amber-400 transition">หน้าแรก (Home)</a></li>
+            <li><a href="places.html" class="hover:text-amber-400 transition">10 วัดดังและโบราณสถาน</a></li>
+            <li><a href="planner.html" class="hover:text-amber-400 transition">จัดทริป One Day Trip</a></li>
+            <li><a href="tips.html" class="hover:text-amber-400 transition">คู่มือการเดินทาง & ข้อควรรู้</a></li>
+            <li><a href="places.html?view=favorites" class="hover:text-amber-400 transition">รายการที่บันทึกไว้ (Favorites)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Highlight Temples -->
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">สถานที่เด่น 10 แห่ง</h4>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-sarabun">
+            <li><a href="detail.html?id=wat-mahathat" class="hover:text-amber-400 transition">1. วัดมหาธาตุ</a></li>
+            <li><a href="detail.html?id=wat-phra-si-sanphet" class="hover:text-amber-400 transition">2. วัดพระศรีสรรเพชญ์</a></li>
+            <li><a href="detail.html?id=wat-chaiwatthanaram" class="hover:text-amber-400 transition">3. วัดไชยวัฒนาราม</a></li>
+            <li><a href="detail.html?id=wat-yai-chai-mongkhon" class="hover:text-amber-400 transition">4. วัดใหญ่ชัยมงคล</a></li>
+            <li><a href="detail.html?id=wat-ratchaburana" class="hover:text-amber-400 transition">5. วัดราชบูรณะ</a></li>
+            <li><a href="detail.html?id=wat-phanan-choeng" class="hover:text-amber-400 transition">6. วัดพนัญเชิง</a></li>
+            <li><a href="detail.html?id=wihan-phra-mongkhon-bophit" class="hover:text-amber-400 transition">7. วิหารมงคลบพิตร</a></li>
+            <li><a href="detail.html?id=wat-phutthaisawan" class="hover:text-amber-400 transition">8. วัดพุทไธศวรรย์</a></li>
+            <li><a href="detail.html?id=wat-na-phra-men" class="hover:text-amber-400 transition">9. วัดหน้าพระเมรุ</a></li>
+            <li><a href="detail.html?id=wat-maheyong" class="hover:text-amber-400 transition">10. วัดมเหยงคณ์</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Important Contacts -->
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">ข้อมูลติดต่อสำคัญ</h4>
+          <ul class="space-y-2 text-xs font-sarabun text-slate-400">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-phone text-amber-500 mt-0.5"></i>
+              <span>ททท. สำนักงานอยุธยา: 035-246-076</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-shield text-amber-500 mt-0.5"></i>
+              <span>ตำรวจท่องเที่ยว: 1155 (24 ชม.)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-train text-amber-500 mt-0.5"></i>
+              <span>สถานีรถไฟอยุธยา: 035-241-521</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright Sub-Footer -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-sarabun gap-4">
+        <p>© 2026 Ayutthaya World Heritage Tourism Portal. ออกแบบและพัฒนาเพื่อส่งเสริมการท่องเที่ยวไทย</p>
+        <p class="flex items-center gap-1">
+          <span>Made with</span>
+          <i class="fa-solid fa-heart text-rose-500"></i>
+          <span>for Ayutthaya Heritage Project</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Render 6 Featured Places on Homepage
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('featured-places-grid');
+      if (container && typeof ATTRACTIONS_DATA !== 'undefined') {
+        const top6 = ATTRACTIONS_DATA.slice(0, 6);
+        container.innerHTML = top6.map((place, idx) => `
+          <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-amber-100 hover-card flex flex-col justify-between group">
+            <!-- Image & Badge -->
+            <div class="relative h-56 w-full overflow-hidden image-zoom-container">
+              <img src="${place.image}" alt="${place.name}" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+              
+              <!-- Number Order & Category Badge -->
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span class="w-8 h-8 rounded-full bg-amber-600 text-white font-bold text-xs flex items-center justify-center shadow-md">
+                  ${idx + 1}
+                </span>
+                <span class="px-3 py-1 rounded-full bg-black/50 backdrop-blur text-white text-xs font-medium border border-white/20">
+                  ${place.categoryLabel}
+                </span>
+              </div>
+
+              <!-- Favorite Button -->
+              <button onclick="toggleFavorite('${place.id}')" data-fav-id="${place.id}" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/80 hover:bg-white text-slate-700 flex items-center justify-center backdrop-blur shadow transition" title="บันทึกรายการโปรด">
+                <i class="${isFavorite(place.id) ? 'fa-solid text-rose-500' : 'fa-regular'} fa-heart text-sm"></i>
+              </button>
+
+              <!-- Bottom Name Overlay -->
+              <div class="absolute bottom-3 left-4 right-4 text-white">
+                <h3 class="text-xl font-bold drop-shadow">${place.name}</h3>
+                <p class="text-amber-200 text-xs font-sarabun">${place.nameEn}</p>
+              </div>
+            </div>
+
+            <!-- Content Card Body -->
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <p class="text-slate-600 text-sm font-sarabun line-clamp-3 leading-relaxed">
+                  ${place.shortDesc}
+                </p>
+                
+                <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-sarabun">
+                  <div class="flex items-center gap-1.5">
+                    <i class="fa-regular fa-clock text-amber-600"></i>
+                    <span>${place.openHours.split('(')[0]}</span>
+                  </div>
+                  <div class="flex items-center gap-1 text-amber-500 font-bold">
+                    <i class="fa-solid fa-star text-xs"></i>
+                    <span class="text-slate-700">${place.rating}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Links -->
+              <div class="pt-2 flex items-center gap-2">
+                <a href="detail.html?id=${place.id}" class="flex-1 text-center py-2.5 px-4 rounded-xl bg-amber-50 hover:bg-amber-600 text-amber-800 hover:text-white font-medium text-xs transition">
+                  ดูรายละเอียด
+                </a>
+                <button onclick="openQuickViewModal('${place.id}')" class="p-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-600 transition" title="ดูตัวอย่างด่วน">
+                  <i class="fa-solid fa-eye text-xs"></i>
+                </button>
+                <a href="${place.googleMapUrl}" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-600 transition" title="เปิดแผนที่">
+                  <i class="fa-solid fa-location-dot text-xs text-amber-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>
