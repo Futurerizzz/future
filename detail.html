@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รายละเอียดสถานที่ท่องเที่ยว | Ayutthaya Heritage</title>
+  <meta name="description" content="ประวัติ ไฮไลต์ เวลาเปิด-ปิด ค่าเข้าชม และแผนที่นำทางโบราณสถานและวัดสำคัญในอยุธยา">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Prompt & Sarabun -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#FDFBF7] text-slate-800 antialiased selection:bg-amber-600 selection:text-white">
+
+  <!-- Navigation Bar -->
+  <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-amber-100/80 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-700 to-amber-500 text-white flex items-center justify-center text-2xl shadow-md shadow-amber-600/20 group-hover:scale-105 transition">
+            <i class="fa-solid fa-place-of-worship"></i>
+          </div>
+          <div>
+            <div class="font-bold text-xl sm:text-2xl text-slate-900 tracking-tight flex items-center gap-1.5">
+              <span>อยุธยา</span>
+              <span class="text-amber-600 font-extrabold">มรดกโลก</span>
+            </div>
+            <p class="text-xs text-slate-500 font-sarabun">คู่มือ 10 วัดดังและโบราณสถาน</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-1 lg:gap-2 text-sm font-medium text-slate-700">
+          <a href="index.html" class="px-4 py-2 rounded-xl hover:text-amber-700 hover:bg-amber-50/60 transition">
+            หน้าแรก
+          </a>
+          <a href="places.html" class="px-4 py-2 rounded-xl text-amber-700 bg-amber-50 font-semibold transition">
+            10 สถานที่แนะนำ
+          </a>
+          <a href="planner.html" class="px-4 py-2 rounded-xl hover:text-amber-700 hover:bg-amber-50/60 transition">
+            วางแผนทริป 1 วัน
+          </a>
+          <a href="tips.html" class="px-4 py-2 rounded-xl hover:text-amber-700 hover:bg-amber-50/60 transition">
+            คู่มือ & ข้อควรรู้
+          </a>
+        </div>
+
+        <!-- Right Side Actions -->
+        <div class="flex items-center gap-3">
+          <a href="places.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-700 text-sm font-medium transition">
+            <i class="fa-solid fa-arrow-left text-xs text-amber-600"></i>
+            <span>กลับหน้ารวม</span>
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button id="mobile-menu-button" type="button" class="md:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50 transition" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-amber-100 bg-white/95 backdrop-blur-lg px-4 pt-3 pb-6 space-y-2 shadow-xl">
+      <a href="index.html" class="block px-4 py-3 rounded-xl font-medium text-slate-700 hover:bg-amber-50 hover:text-amber-700">
+        <i class="fa-solid fa-house mr-3 w-5"></i> หน้าแรก
+      </a>
+      <a href="places.html" class="block px-4 py-3 rounded-xl font-semibold text-amber-700 bg-amber-50">
+        <i class="fa-solid fa-landmark-dome mr-3 w-5"></i> 10 สถานที่แนะนำ
+      </a>
+      <a href="planner.html" class="block px-4 py-3 rounded-xl font-medium text-slate-700 hover:bg-amber-50 hover:text-amber-700">
+        <i class="fa-solid fa-route mr-3 w-5"></i> วางแผนทริป 1 วัน
+      </a>
+      <a href="tips.html" class="block px-4 py-3 rounded-xl font-medium text-slate-700 hover:bg-amber-50 hover:text-amber-700">
+        <i class="fa-solid fa-circle-info mr-3 w-5"></i> คู่มือ & ข้อควรรู้
+      </a>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="bg-white border-b border-amber-100/60 py-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs font-sarabun text-slate-500 flex items-center gap-2 overflow-x-auto">
+      <a href="index.html" class="hover:text-amber-700 whitespace-nowrap">หน้าแรก</a>
+      <i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
+      <a href="places.html" class="hover:text-amber-700 whitespace-nowrap">10 สถานที่แนะนำ</a>
+      <i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
+      <span id="breadcrumb-current" class="text-amber-800 font-semibold whitespace-nowrap">รายละเอียดสถานที่</span>
+    </div>
+  </div>
+
+  <!-- Main Detail Content Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12" id="detail-container">
+    
+    <!-- Dynamic Loading Skeleton (Replaced by JS) -->
+    <div id="loading-state" class="text-center py-20">
+      <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-amber-600 border-t-transparent mb-4"></div>
+      <p class="text-slate-500 font-sarabun">กำลังโหลดข้อมูลสถานที่...</p>
+    </div>
+
+    <!-- Detail View Layout (Filled via JS) -->
+    <div id="detail-content" class="hidden space-y-12">
+      
+      <!-- Top Title & Action Bar -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-slate-200">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-2">
+            <span id="place-category-badge" class="px-3.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-semibold">
+              โบราณสถานมรดกโลก
+            </span>
+            <span id="place-special-badge" class="px-3 py-1 rounded-full bg-amber-400 text-slate-900 text-xs font-bold">
+              ไฮไลต์
+            </span>
+          </div>
+          <h1 id="place-name" class="text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight">
+            ชื่อวัด
+          </h1>
+          <p id="place-name-en" class="text-amber-800 text-base sm:text-lg font-sarabun mt-1">
+            English Name
+          </p>
+        </div>
+
+        <!-- Rating & Buttons -->
+        <div class="flex items-center gap-3">
+          <button id="btn-fav" class="px-4 py-2.5 rounded-xl border border-slate-200 hover:bg-rose-50 hover:border-rose-200 text-slate-700 text-sm font-medium transition flex items-center gap-2">
+            <i id="fav-icon" class="fa-regular fa-heart"></i>
+            <span id="fav-text">บันทึก</span>
+          </button>
+          <button id="btn-share" class="px-4 py-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-700 text-sm font-medium transition flex items-center gap-2">
+            <i class="fa-solid fa-share-nodes"></i>
+            <span>แชร์</span>
+          </button>
+          <a id="btn-maps-top" href="#" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-sm font-medium shadow-sm transition flex items-center gap-2">
+            <i class="fa-solid fa-location-arrow text-xs"></i>
+            <span>นำทาง (GPS)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Gallery & Image Showcase -->
+      <div class="space-y-4">
+        <!-- Main Image -->
+        <div class="relative h-[320px] sm:h-[480px] lg:h-[540px] rounded-3xl overflow-hidden shadow-lg border border-amber-100 group">
+          <img id="main-gallery-img" src="" alt="" class="w-full h-full object-cover transition duration-500">
+          <div class="absolute bottom-4 right-4 px-4 py-2 rounded-xl bg-black/60 backdrop-blur text-white text-xs font-sarabun flex items-center gap-2">
+            <i class="fa-solid fa-camera"></i>
+            <span id="gallery-count">รูปภาพประกอบ</span>
+          </div>
+        </div>
+
+        <!-- Thumbnails -->
+        <div id="gallery-thumbnails" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+          <!-- Thumbnail buttons generated by JS -->
+        </div>
+      </div>
+
+      <!-- Main Two-Column Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        
+        <!-- Left 2 Cols: History, Highlights & Blessing -->
+        <div class="lg:col-span-2 space-y-10">
+          
+          <!-- Blessing / Auspicious Card -->
+          <div class="bg-gradient-to-r from-amber-500/10 via-amber-400/10 to-orange-500/10 rounded-3xl p-6 sm:p-8 border border-amber-200 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-600 to-amber-700 text-white flex-shrink-0 flex items-center justify-center text-xl shadow-md">
+              <i class="fa-solid fa-hands-praying"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-amber-900 mb-1">สิริมงคลประจำวัด</h3>
+              <p id="place-blessing" class="text-slate-700 text-sm sm:text-base font-sarabun leading-relaxed">
+                เสริมสิริมงคล...
+              </p>
+            </div>
+          </div>
+
+          <!-- History & Overview -->
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
+              <i class="fa-solid fa-book-open text-amber-600"></i>
+              <span>ประวัติความเป็นมาและคุณค่าทางประวัติศาสตร์</span>
+            </h2>
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-4 text-slate-700 font-sarabun text-base leading-relaxed">
+              <p id="place-full-desc"></p>
+            </div>
+          </section>
+
+          <!-- Highlights List -->
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
+              <i class="fa-solid fa-wand-magic-sparkles text-amber-600"></i>
+              <span>จุดไฮไลต์ห้ามพลาด</span>
+            </h2>
+            <div id="place-highlights-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Rendered via JS -->
+            </div>
+          </section>
+
+          <!-- Google Maps Embed Section -->
+          <section class="space-y-4">
+            <div class="flex items-center justify-between">
+              <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                <i class="fa-solid fa-map-location-dot text-amber-600"></i>
+                <span>แผนที่และการเดินทาง</span>
+              </h2>
+              <a id="btn-open-gmaps" href="#" target="_blank" rel="noopener noreferrer" class="text-amber-700 text-xs font-semibold hover:underline flex items-center gap-1">
+                <span>เปิดในแอปแผนที่</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-100">
+              <div class="w-full h-80 rounded-2xl overflow-hidden border border-slate-200">
+                <iframe 
+                  id="map-iframe" 
+                  src="" 
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy">
+                </iframe>
+              </div>
+              <div class="p-3 text-xs text-slate-500 font-sarabun flex items-center justify-between">
+                <span id="place-location-address"></span>
+                <button onclick="copyLocationAddress()" class="text-amber-700 font-medium hover:underline">
+                  <i class="fa-regular fa-copy mr-1"></i> คัดลอกที่อยู่
+                </button>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Right 1 Col: Quick Info Sidebar -->
+        <div class="space-y-6">
+          
+          <!-- Key Info Card -->
+          <div class="bg-white rounded-3xl p-6 shadow-sm border border-amber-100 space-y-5">
+            <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
+              <i class="fa-solid fa-circle-info text-amber-600"></i>
+              <span>ข้อมูลสำคัญสำหรับผู้เข้าชม</span>
+            </h3>
+
+            <!-- Open Hours -->
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-sarabun">เวลาเปิดทำการ</div>
+                <div id="info-open-hours" class="text-sm font-semibold text-slate-800"></div>
+              </div>
+            </div>
+
+            <!-- Admission Fee -->
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-ticket"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-sarabun">อัตราค่าเข้าชม</div>
+                <div id="info-fee" class="text-sm font-semibold text-slate-800"></div>
+              </div>
+            </div>
+
+            <!-- Suggested Duration -->
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-hourglass-half"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-sarabun">ระยะเวลาแนะนำ</div>
+                <div id="info-duration" class="text-sm font-semibold text-slate-800"></div>
+              </div>
+            </div>
+
+            <!-- Best Time -->
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-sun"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-sarabun">ช่วงเวลาถ่ายรูปสวย</div>
+                <div id="info-best-time" class="text-sm font-semibold text-slate-800"></div>
+              </div>
+            </div>
+
+            <!-- Dress Code reminder -->
+            <div class="p-4 rounded-2xl bg-amber-50/70 border border-amber-100 text-xs font-sarabun text-amber-900 space-y-1.5">
+              <div class="font-bold flex items-center gap-1.5">
+                <i class="fa-solid fa-shirt text-amber-700"></i>
+                <span>ข้อแนะนำการแต่งกาย</span>
+              </div>
+              <p>โปรดสวมเสื้อมีแขน กางเกง/กระโปรงยาวคลุมเข่า ถอดหมวกและแว่นตากันแดดก่อนเข้าวิหาร</p>
+            </div>
+
+            <!-- Action Button -->
+            <a id="sidebar-maps-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-2xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-semibold text-sm text-center shadow-md shadow-amber-600/20 transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-location-arrow"></i>
+              <span>นำทางด้วย Google Maps</span>
+            </a>
+
+          </div>
+
+          <!-- Trip Planner Teaser Card -->
+          <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-6 shadow-md space-y-4">
+            <span class="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold">
+              จัดทริปท่องเที่ยว
+            </span>
+            <h4 class="text-xl font-bold">เที่ยวต่อได้ทันที!</h4>
+            <p class="text-slate-300 text-xs font-sarabun leading-relaxed">
+              รวมสถานที่นี้เข้ากับโปรแกรม One Day Trip หรือดูเส้นทางเที่ยวรอบเกาะเมืองที่ประหยัดเวลาที่สุด
+            </p>
+            <a href="planner.html" class="block text-center py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs transition">
+              ดูเส้นทางท่องเที่ยวแนะนำ
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Other Places to Explore (Carousel / Grid) -->
+      <section class="pt-12 border-t border-slate-200">
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <h3 class="text-2xl font-bold text-slate-900">สถานที่แนะนำแห่งอื่นๆ</h3>
+            <p class="text-slate-500 text-xs sm:text-sm font-sarabun">สำรวจวัดและโบราณสถานเพิ่มเติมใน 10 อันดับ</p>
+          </div>
+          <a href="places.html" class="text-amber-700 text-xs sm:text-sm font-semibold hover:underline flex items-center gap-1">
+            <span>ดูทั้งหมด 10 แห่ง</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <div id="related-places-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Rendered via JS -->
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs font-sarabun space-y-4">
+      <div class="flex items-center justify-center gap-2 text-white font-bold text-base">
+        <i class="fa-solid fa-place-of-worship text-amber-500"></i>
+        <span>อยุธยามรดกโลกและวัดสำคัญ 10 แห่ง</span>
+      </div>
+      <p class="text-slate-500">© 2026 Ayutthaya Heritage Travel Portal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    let currentPlace = null;
+
+    function copyLocationAddress() {
+      if (currentPlace) {
+        copyToClipboard(currentPlace.location);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const placeId = urlParams.get('id') || 'wat-mahathat';
+
+      if (typeof ATTRACTIONS_DATA === 'undefined') return;
+
+      currentPlace = ATTRACTIONS_DATA.find(p => p.id === placeId) || ATTRACTIONS_DATA[0];
+
+      // Update Page Title
+      document.title = `${currentPlace.name} (${currentPlace.nameEn}) | เที่ยวอยุธยา มรดกโลก`;
+
+      // Fill Elements
+      document.getElementById('breadcrumb-current').textContent = currentPlace.name;
+      document.getElementById('place-name').textContent = currentPlace.name;
+      document.getElementById('place-name-en').textContent = currentPlace.nameEn;
+      document.getElementById('place-category-badge').textContent = currentPlace.categoryLabel;
+      document.getElementById('place-special-badge').textContent = currentPlace.badge;
+      document.getElementById('place-blessing').textContent = currentPlace.blessing;
+      document.getElementById('place-full-desc').textContent = currentPlace.fullDesc;
+      
+      // Info Sidebar
+      document.getElementById('info-open-hours').textContent = currentPlace.openHours;
+      document.getElementById('info-fee').textContent = currentPlace.admissionFee;
+      document.getElementById('info-duration').textContent = currentPlace.suggestedDuration;
+      document.getElementById('info-best-time').textContent = currentPlace.bestTime;
+      document.getElementById('place-location-address').textContent = `พิกัด: ${currentPlace.location}`;
+
+      // Maps
+      document.getElementById('map-iframe').src = currentPlace.mapEmbedUrl;
+      document.getElementById('btn-maps-top').href = currentPlace.googleMapUrl;
+      document.getElementById('btn-open-gmaps').href = currentPlace.googleMapUrl;
+      document.getElementById('sidebar-maps-btn').href = currentPlace.googleMapUrl;
+
+      // Gallery Main Image
+      const mainImg = document.getElementById('main-gallery-img');
+      mainImg.src = currentPlace.image;
+      mainImg.alt = currentPlace.name;
+
+      // Thumbnails
+      const thumbContainer = document.getElementById('gallery-thumbnails');
+      thumbContainer.innerHTML = currentPlace.gallery.map((imgUrl, index) => `
+        <button onclick="document.getElementById('main-gallery-img').src='${imgUrl}'" class="h-20 rounded-2xl overflow-hidden border-2 border-transparent hover:border-amber-500 focus:border-amber-500 transition shadow-sm">
+          <img src="${imgUrl}" alt="${currentPlace.name} ${index + 1}" class="w-full h-full object-cover">
+        </button>
+      `).join('');
+
+      // Highlights List
+      const highContainer = document.getElementById('place-highlights-container');
+      highContainer.innerHTML = currentPlace.highlights.map(h => `
+        <div class="bg-white p-5 rounded-2xl border border-amber-100 flex items-start gap-3 shadow-sm">
+          <div class="w-8 h-8 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i class="fa-solid fa-check text-xs"></i>
+          </div>
+          <span class="font-sarabun text-sm text-slate-800 leading-relaxed font-medium">${h}</span>
+        </div>
+      `).join('');
+
+      // Favorite & Share Buttons
+      const favBtn = document.getElementById('btn-fav');
+      const favIcon = document.getElementById('fav-icon');
+      const favText = document.getElementById('fav-text');
+
+      function updateFavDisplay() {
+        const isFav = isFavorite(currentPlace.id);
+        if (isFav) {
+          favIcon.className = 'fa-solid fa-heart text-rose-500';
+          favText.textContent = 'บันทึกแล้ว';
+        } else {
+          favIcon.className = 'fa-regular fa-heart';
+          favText.textContent = 'บันทึก';
+        }
+      }
+
+      updateFavDisplay();
+
+      favBtn.addEventListener('click', () => {
+        toggleFavorite(currentPlace.id);
+        updateFavDisplay();
+      });
+
+      document.getElementById('btn-share').addEventListener('click', () => {
+        sharePage(currentPlace.name, currentPlace.shortDesc, window.location.href);
+      });
+
+      // Related Places (Next 3 places)
+      const currentIndex = ATTRACTIONS_DATA.findIndex(p => p.id === currentPlace.id);
+      const related = [];
+      for (let i = 1; i <= 3; i++) {
+        const nextIndex = (currentIndex + i) % ATTRACTIONS_DATA.length;
+        related.push(ATTRACTIONS_DATA[nextIndex]);
+      }
+
+      const relatedContainer = document.getElementById('related-places-grid');
+      relatedContainer.innerHTML = related.map(p => `
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 hover-card flex flex-col justify-between">
+          <div class="relative h-44 overflow-hidden image-zoom-container">
+            <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover">
+            <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-black/60 text-white text-[11px] backdrop-blur font-medium">
+              ${p.categoryLabel}
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h4 class="font-bold text-slate-900 text-lg">${p.name}</h4>
+              <p class="text-xs text-slate-500 font-sarabun line-clamp-2 mt-1">${p.shortDesc}</p>
+            </div>
+            <a href="detail.html?id=${p.id}" class="w-full text-center py-2 px-4 rounded-xl bg-amber-50 hover:bg-amber-600 text-amber-800 hover:text-white font-medium text-xs transition">
+              ดูรายละเอียด
+            </a>
+          </div>
+        </div>
+      `).join('');
+
+      // Show Content, Hide Skeleton
+      document.getElementById('loading-state').classList.add('hidden');
+      document.getElementById('detail-content').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

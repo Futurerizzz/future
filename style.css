@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Ayutthaya World Heritage Travel Guide - Modern Stylesheet
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Sarabun:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary-terracotta: #C85A32;
+  --primary-terracotta-dark: #A13C18;
+  --primary-gold: #D4AF37;
+  --primary-gold-light: #F4E5B0;
+  --slate-dark: #0F172A;
+  --slate-card: #1E293B;
+  --bg-sand: #FDFBF7;
+  --bg-sand-dark: #F5EFEB;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Prompt', sans-serif;
+  background-color: var(--bg-sand);
+  color: #334155;
+  overflow-x: hidden;
+}
+
+.font-sarabun {
+  font-family: 'Sarabun', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1ede6;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4a373;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bc6c25;
+}
+
+/* Glassmorphism Classes */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Hero Background and Gradient */
+.hero-gradient {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.3) 0%, rgba(15, 23, 42, 0.85) 100%);
+}
+
+.terracotta-gradient {
+  background: linear-gradient(135deg, #A13C18 0%, #C85A32 50%, #D48B37 100%);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #F3D063 50%, #B8860B 100%);
+}
+
+/* Card Hover Effects */
+.hover-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(161, 60, 24, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Image Zoom Effect */
+.image-zoom-container {
+  overflow: hidden;
+}
+
+.image-zoom-container img {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.image-zoom-container:hover img {
+  transform: scale(1.08);
+}
+
+/* Custom Badges */
+.badge-gold {
+  background: linear-gradient(135deg, #FFF6D6 0%, #FFE999 100%);
+  color: #8C6200;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.badge-terracotta {
+  background: #FFF1EB;
+  color: #A13C18;
+  border: 1px solid rgba(200, 90, 50, 0.25);
+}
+
+/* Shimmer / Skeleton Animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #f0ede6 25%, #f9f7f2 50%, #f0ede6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Floating Animation */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.floating-elem {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* Mobile Nav Transition */
+#mobile-menu {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Print Styles */
+@media print {
+  nav, footer, .no-print, button {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}
